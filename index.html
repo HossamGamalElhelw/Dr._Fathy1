@@ -71,7 +71,14 @@
       <div class="container">
         <div class="bio_content">
           <div class="bio_content_item">
-            <i class="fa-solid fa-satellite-dish bio_icon"></i>
+            <lord-icon
+              class="bio_icon"
+              src="https://cdn.lordicon.com/ajyyzcwv.json"
+              trigger="hover"
+              colors="primary:#009999,secondary:#19c8fa"
+            >
+            </lord-icon>
+
             <div class="bio_content_text">
               He is a highly respected and accomplished professor in the
               Department of Electronic and Communication Engineering at
@@ -79,7 +86,14 @@
             </div>
           </div>
           <div class="bio_content_item">
-            <i class="fa-solid fa-microchip bio_icon"></i>
+            <lord-icon
+              class="bio_icon"
+              src="https://cdn.lordicon.com/gqzfzudq.json"
+              trigger="hover"
+              colors="primary:#19c8fa,secondary:#009999"
+            >
+            </lord-icon>
+
             <div class="bio_content_text">
               He has been teaching a wide range of courses to undergraduate and
               graduate students for many years, and is considered to be an
@@ -87,7 +101,13 @@
             </div>
           </div>
           <div class="bio_content_item">
-            <i class="fa-solid fa-laptop-code bio_icon"></i>
+            <lord-icon
+              class="bio_icon"
+              src="https://cdn.lordicon.com/qhgmphtg.json"
+              trigger="hover"
+              colors="primary:#19c8fa,secondary:#08a88a"
+            >
+            </lord-icon>
             <div class="bio_content_text">
               He has received awards and honors for his work and is a member of
               professional organizations He is committed to staying current in
@@ -95,7 +115,13 @@
             </div>
           </div>
           <div class="bio_content_item">
-            <i class="fa-solid fa-file-code bio_icon"></i>
+            <lord-icon
+              class="bio_icon"
+              src="https://cdn.lordicon.com/wxnxiano.json"
+              trigger="morph"
+              colors="primary:#19c8fa,secondary:#009999"
+            >
+            </lord-icon>
             <div class="bio_content_text">
               He has been an active researcher in the field of electronic and
               communication engineering and has published numerous papers and
@@ -144,33 +170,38 @@
       <div class="container">
         <div class="team">
           <div class="team_leader">
-            <div class="team_content">
-              <img src="images/drFathi.jpg" alt="person photo" id="img" />
-              <div class="team-overlay">
-                <a href="#"><li class="fa-brands fa-facebook"></li></a>
-                <a href="#"><li class="fa-brands fa-twitter"></li></a>
-                <a href="#"><li class="fa-brands fa-linkedin"></li></a>
-              </div>
-              <h2 class="team_title">Leader</h2>
-              <p class="team_description">
+            <div class="team_member">
+              <div class="card-border-top"></div>
+              <div class="img img_leader"></div>
+              <span> <p>Leader</p></span>
+              <p class="person_info">
                 Dr. Fathi Mohamed is a highly respected professor in Beni-Seuf
               </p>
             </div>
-          </div>
-          <div class="team_assistant">
-            <div class="team_content">
-              <img src="images/assistant.png" alt="Person photo" id="img" />
-              <div class="team-overlay">
+
+            <!-- <div class="team-overlay">
                 <a href="#"><li class="fa-brands fa-facebook"></li></a>
                 <a href="#"><li class="fa-brands fa-twitter"></li></a>
                 <a href="#"><li class="fa-brands fa-linkedin"></li></a>
               </div>
-              <h2 class="team_title">Assistant</h2>
-              <p class="team_description">
+           -->
+          </div>
+          <div class="team_assistant">
+            <div class="team_member">
+              <div class="card-border-top"></div>
+              <div class="img img_assistant"></div>
+              <span> Assistant</span>
+              <p class="person_info">
                 Eng. Hossam Gamal is Electronic and Communication Engineer,
                 Front-End Developer
               </p>
             </div>
+
+            <!-- <div class="team-overlay">
+                <a href="#"><li class="fa-brands fa-facebook"></li></a>
+                <a href="#"><li class="fa-brands fa-twitter"></li></a>
+                <a href="#"><li class="fa-brands fa-linkedin"></li></a>
+              </div> -->
           </div>
         </div>
       </div>
@@ -179,16 +210,24 @@
     <!-- Section 6 contact -->
     <section class="contact" id="contact">
       <h3 class="title">Contact</h3>
-
-      <form id="contact-form">
-        <div class="contact_info">
-          <input type="text" placeholder="Name" id="name" />
-          <input type="email" placeholder="Email" id="email" />
+      <div class="contact_content">
+        <div class="contact_img">
+          <img
+            src="images/981-consultation-outline-min.gif"
+            alt="consultation photo"
+          />
         </div>
-        <input type="text" placeholder="Subject" id="subject" />
-        <textarea placeholder="Message" id="message"></textarea>
-        <button type="submit">Submit</button>
-      </form>
+
+        <form id="contact-form">
+          <div class="contact_info">
+            <input type="text" placeholder="Name" id="name" />
+            <input type="email" placeholder="Email" id="email" />
+          </div>
+          <input type="text" placeholder="Subject" id="subject" />
+          <textarea placeholder="Message" id="message"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </section>
     <!-- footer -->
     <footer>
@@ -210,5 +249,6 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
   </body>
 </html>
