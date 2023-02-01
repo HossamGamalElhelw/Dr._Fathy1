@@ -25,7 +25,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="dark-mode">
     <!-- header -->
     <header>
       <div class="container">
@@ -49,7 +49,7 @@
       </div>
     </header>
     <!-- Section 1 HOME-->
-    <section class="Section_1" id="home">
+    <section class="section_1" id="home">
       <div class="text">
         <div class="content">
           <h2>Hello! My Student <br /></h2>
@@ -63,6 +63,8 @@
         </div>
       </div>
     </section>
+    <button type="button" id="btn_background">Click here</button>
+
     <!-- Section 2 BIO -->
     <section class="bio" id="bio">
       <h3 class="title">Bio</h3>
@@ -173,7 +175,40 @@
         </div>
       </div>
     </section>
+
+    <!-- Section 6 contact -->
+    <section class="contact" id="contact">
+      <h3 class="title">Contact</h3>
+
+      <form id="contact-form">
+        <div class="contact_info">
+          <input type="text" placeholder="Name" id="name" />
+          <input type="email" placeholder="Email" id="email" />
+        </div>
+        <input type="text" placeholder="Subject" id="subject" />
+        <textarea placeholder="Message" id="message"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
     <!-- footer -->
-    <footer></footer>
+    <footer>
+      <div class="footer_content">
+        <div class="container">
+          <p class="footer_text">Copyright &copy; 2023</p>
+        </div>
+        <!-- <div class="social-icons">
+          <a href="#">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-whatsapp-square"></i>
+          </a>
+        </div> -->
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
