@@ -267,8 +267,8 @@ header .form {
   column-gap: 10px;
 }
 .bio_icon {
-  font-size: 40px;
-  color: var(--maincolor);
+  width: 100%;
+  height: 80px;
 }
 @media (max-width: 767px) {
   .bio_content {
@@ -289,7 +289,9 @@ header .form {
   }
 }
 /* About */
-
+/* .about {
+  background: url("images/Hexagon.svg");
+} */
 .about_content {
   display: flex;
 }
@@ -336,12 +338,12 @@ header .form {
   font-weight: 600;
 }
 /* TEAM */
-
 .team {
   display: flex;
   text-align: center;
   justify-items: center;
   justify-content: space-evenly;
+  align-items: center;
   padding-bottom: 50px;
   gap: 50px;
 }
@@ -349,38 +351,63 @@ header .form {
   .team {
     flex-direction: column;
   }
+  .team_member span {
+    font-size: 25px !important;
+  }
+  .team_member .person_info {
+    font-size: 18px !important;
+  }
+}
+.team_member {
+  max-width: 250px;
+  height: 330px;
+  background: var(--maincolor);
+  border-radius: 15px;
+  box-shadow: -20px -20px 20px 0px #4ad8ff49;
 }
 
-.team_content {
-  border: 1px solid #19c8fa;
+.team_member .card-border-top {
+  width: 60%;
+  height: 3%;
+  background: #0c7795;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+}
 
-  max-width: 350px;
-  min-height: 360px;
-}
-.team_assistant #img {
-  width: 50%;
-}
-.team_background {
-  transform: translateX(-100%);
-}
-.team_content:hover {
-  background-color: #a2a2a2;
-  transform: translateX(0);
-}
-.team_title {
+.team_member span {
+  font-weight: 600;
+  color: white;
   text-align: center;
+  display: block;
+  padding-top: 10px;
+  font-size: 20px;
 }
 
-#img {
-  width: 90%;
-  height: 80%;
-  padding: 10px 0;
-  align-items: center;
+.team_member .person_info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  padding-top: 3px;
+  font-size: 15px;
 }
-.team_description {
-  opacity: 0.7;
-  padding: 10px 0;
+
+.team_member .img {
+  width: 50%;
+  height: 50%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
 }
+.img_leader {
+  background: url("images/drFathi.png");
+}
+.img_assistant {
+  background: url("images/assistant.png");
+}
+
 .team-overlay {
   position: absolute;
   top: 0;
@@ -413,14 +440,18 @@ header .form {
 
 /* contact */
 
+.contact_content {
+  display: flex;
+  flex-direction: row-reverse;
+}
 #contact {
-  width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
 #contact-form {
   display: flex;
+  width: 70%;
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
@@ -430,9 +461,23 @@ header .form {
   gap: 20px;
   width: 80%;
 }
+
 @media (max-width: 776px) {
   .contact_info {
     display: block;
+    width: 100%;
+  }
+  .contact_content {
+    flex-direction: column;
+  }
+  #contact-form {
+    width: 100%;
+  }
+  .contact_img {
+    position: static;
+    width: 350px;
+  }
+  .contact_img img {
     width: 100%;
   }
 }
