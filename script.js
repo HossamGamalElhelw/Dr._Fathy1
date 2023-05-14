@@ -101,5 +101,5 @@ window.addEventListener("load", function () {
   const loader = document.querySelector(".loading");
   setTimeout(() => {
     loader.classList.add("hidden");
-  }, 2000);
+  }, 4000);
 });
