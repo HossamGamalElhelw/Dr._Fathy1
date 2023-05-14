@@ -1,3 +1,13 @@
+/// header
+
+const menuList = document.getElementById("menu-list");
+const toggleMenu = document.querySelector(".toggle-menu");
+
+toggleMenu.addEventListener("click", () => {
+  menuList.classList.toggle("show");
+});
+
+// change background , it is not display
 let backgroundImg = document.querySelector(".section_1");
 let button = document.querySelector("#btn_background");
 
