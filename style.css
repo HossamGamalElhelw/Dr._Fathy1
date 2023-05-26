@@ -410,6 +410,162 @@ header .form {
   font-size: 50px;
   font-weight: 600;
 }
+.materials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 767px) {
+  .materials {
+    grid-template-columns: 1fr;
+  }
+}
+.material {
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+.material:active {
+  transform: scale(0.95);
+}
+
+.material_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--maincolor);
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
+
+.material_image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.title_material {
+  margin: 0;
+}
+
+.materialICon,
+.materialICon2 {
+  font-size: 24px;
+  cursor: pointer;
+  /* color: #009999; */
+}
+
+.hidden_material {
+  display: none;
+}
+
+.active_material {
+  display: block;
+}
+
+.drop_list {
+  margin: 10px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+}
+
+.drop_list_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #009999;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.drop_list_icon {
+  font-size: 16px;
+}
+
+.drop_list_content {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.drop_list_content.active_material {
+  display: block;
+}
+
+.drop_list_items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(1fr, 1fr, 1fr);
+}
+
+.drop_list_item {
+  padding: 5px 0;
+}
+
+.drop_list_item a {
+  text-decoration: none;
+  color: #333;
+}
+.drop_list_item a:hover,
+.drop_list_item a:active {
+  color: var(--maincolor);
+}
+/* Research */
+/* Researchers Section */
+#research-section {
+  text-align: center;
+  margin: 30px;
+}
+#research-section h1 {
+  color: var(--maincolor);
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.research-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.research-item {
+  background-color: var(--maincolor);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.research-title {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.research-description {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.research-link {
+  display: inline-block;
+  background-color: #428bca;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.research-link:hover {
+  background-color: #3276b1;
+}
+
 /* TEAM */
 .team {
   display: flex;
@@ -594,123 +750,4 @@ header .form {
   text-align: center;
   padding: 20px 0;
   color: white;
-}
-
-/* ///////////////////////////////////// */
-
-/* .hidden_material {
-  display: none;
-}
-.active_material {
-  display: block;
-}
-.title_material {
-  cursor: pointer;
-}
-.materials {
-  display: flex;
-  justify-content: space-between;
-} */
-.materials {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-@media (max-width: 767px) {
-  .materials {
-    grid-template-columns: 1fr;
-  }
-}
-.material {
-  margin: 10px;
-  transition: transform 0.3s ease;
-}
-.material:active {
-  transform: scale(0.95);
-}
-
-.material_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: var(--maincolor);
-  cursor: pointer;
-  border-radius: 5px;
-  color: white;
-}
-
-.material_image {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.title_material {
-  margin: 0;
-}
-
-.materialICon,
-.materialICon2 {
-  font-size: 24px;
-  cursor: pointer;
-  /* color: #009999; */
-}
-
-.hidden_material {
-  display: none;
-}
-
-.active_material {
-  display: block;
-}
-
-.drop_list {
-  margin: 10px;
-  /* border: 1px solid #ccc; */
-  border-radius: 5px;
-}
-
-.drop_list_title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #009999;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.drop_list_icon {
-  font-size: 16px;
-}
-
-.drop_list_content {
-  padding: 10px;
-  background-color: #fff;
-}
-
-.drop_list_content.active_material {
-  display: block;
-}
-
-.drop_list_items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.drop_list_item {
-  padding: 5px 0;
-}
-
-.drop_list_item a {
-  text-decoration: none;
-  color: #333;
-}
-.drop_list_item a:hover,
-.drop_list_item a:active {
-  color: var(--maincolor);
 }
