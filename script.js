@@ -66,6 +66,27 @@ form.addEventListener("submit", function (event) {
 //     materialIcon2.classList.toggle("hidden_material");
 //   });
 // });
+// Function to create and show the separate page with information
+function showPageWithData(data) {
+  const pageContainer = document.createElement("div");
+  pageContainer.classList.add("separate_page");
+
+  const closeBtn = document.createElement("button");
+  closeBtn.textContent = "Exit";
+  closeBtn.classList.add("close_button");
+  closeBtn.addEventListener("click", function () {
+    pageContainer.remove(); // Close the page when the "Exit" button is clicked
+  });
+
+  const pageContent = document.createElement("div");
+  pageContent.classList.add("page_content");
+  pageContent.innerHTML = data; // Set the data inside the page
+
+  pageContainer.appendChild(closeBtn);
+  pageContainer.appendChild(pageContent);
+  document.body.appendChild(pageContainer);
+}
+
 let materials = document.querySelectorAll(".material");
 
 materials.forEach(function (material) {
@@ -75,13 +96,6 @@ materials.forEach(function (material) {
   let materialTitle = material.querySelector(".title_material");
   let materialHeader = material.querySelector(".material_header");
 
-  // materialIcon.addEventListener("click", function (event) {
-  //   event.preventDefault();
-  //   materialScreen.classList.toggle("hidden_material");
-  //   materialScreen.classList.toggle("active_material");
-  //   materialIcon.classList.toggle("hidden_material");
-  //   materialIcon2.classList.toggle("hidden_material");
-  // });
   materialHeader.addEventListener("click", function (event) {
     event.preventDefault();
     materialScreen.classList.toggle("hidden_material");
@@ -93,23 +107,36 @@ materials.forEach(function (material) {
   let dropLists = material.querySelectorAll(".drop_list");
 
   dropLists.forEach(function (dropList) {
-    let dropListIcon = dropList.querySelector(".drop_list_icon");
     let dropListTitle = dropList.querySelector(".drop_list_title");
     let dropListContent = dropList.querySelector(".drop_list_content");
 
     dropListTitle.addEventListener("click", function (event) {
       event.preventDefault();
-      dropListContent.classList.toggle("hidden_material");
-      dropListIcon.classList.toggle("fa-chevron-down");
-      dropListIcon.classList.toggle("fa-chevron-up");
+      let dataToShow = dropListContent.innerHTML; // Get the content of the dropdown
+      showPageWithData(dataToShow); // Call the function to show the separate page with the data
     });
   });
 });
+
+function showPageWithData(data) {
+  const modalOverlay = document.getElementById("modalOverlay");
+  const modalDataContent = document.getElementById("modalDataContent");
+  const closeModalBtn = document.getElementById("closeModalBtn");
+
+  modalDataContent.innerHTML = data;
+  modalOverlay.style.display = "flex";
+
+  closeModalBtn.addEventListener("click", function () {
+    modalOverlay.style.display = "none";
+  });
+}
+
+// The rest of your JavaScript code remains the same.
 
 // animation
 window.addEventListener("load", function () {
   const loader = document.querySelector(".loading");
   setTimeout(() => {
     loader.classList.add("hidden");
-  }, 4000);
+  }, 100);
 });
