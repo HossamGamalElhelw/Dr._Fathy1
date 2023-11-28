@@ -138,5 +138,5 @@ window.addEventListener("load", function () {
   const loader = document.querySelector(".loading");
   setTimeout(() => {
     loader.classList.add("hidden");
-  }, 100);
+  }, 1000);
 });
